@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
+import { ShopContext } from "../context/ShopContext";
+
 
 const NavBar: React.FC = () => {
+  const context = useContext(ShopContext);
   const [visible, setVisible] = useState<boolean>(false);
+
+  if (!context) {
+    throw new Error("ShopContext must be used within a ShopContextProvider");
+}
+
+  const { setShowSearch } = context;
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
@@ -32,7 +41,7 @@ const NavBar: React.FC = () => {
       </ul>
 
       <div className="flex items-center gap-6">
-        <img src={assets.searchIcon} className="w-5 cursor-pointer" alt="Search Icon" />
+        <img onClick={()=>setShowSearch(true)} src={assets.searchIcon} className="w-5 cursor-pointer" alt="Search Icon" />
 
         <div className="group relative">
           <img src={assets.profileIcon} className="w-5 cursor-pointer" alt="Profile Icon" />

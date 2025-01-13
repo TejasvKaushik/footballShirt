@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home'
-import Collections from './pages/collections'
+import Collection from './pages/Collection'
 import About from './pages/about'
 import Cart from './pages/cart'
 import Contact from './pages/contact'
@@ -13,15 +13,16 @@ import NavBar from './components/NavBar'
 import Hero from './components/Hero'
 import LatestCollection from './components/LatestCollection'
 import Footer from './components/Footer'
+import SearchBar from './components/SearchBar'
 
 const App = () => {
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:[9vw]'>
       <NavBar />
-      <Home />
+      <SearchBar />
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/collection' element={<Collections/>} />
+        <Route path='/collection' element={<Collection/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/contact' element={<Contact/>} />

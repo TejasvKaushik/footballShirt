@@ -9,6 +9,7 @@ import hero_img from './fn8780-322_357863231_d_a_1x1.jpg'
 import exchange_icon from './coins-swap.svg'
 import support_icon from './group.svg'
 import quality_icon from './thumbs-up.svg'
+import cross_icon from './xmark.svg'
 
 
 
@@ -74,7 +75,8 @@ export const assets = {
     hero_img,
     support_icon,
     quality_icon,
-    exchange_icon
+    exchange_icon,
+    cross_icon
 }
 
 

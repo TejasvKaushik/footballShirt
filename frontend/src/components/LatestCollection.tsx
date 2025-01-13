@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Title from './Title';
-import Product from '../pages/product';
 import ProductItem from './ProductItem';
 
-interface Product {
+interface ProductType {
     id: string;
     name: string;
     description: string;
@@ -26,7 +25,7 @@ const LatestCollection: React.FC = () => {
 
     const { products } = context;
 
-    const [latestProducts, setLatestProducts] = useState<Product[]>([]);
+    const [latestProducts, setLatestProducts] = useState<ProductType[]>([]);
 
     useEffect(() => {
         const updatedProducts = products.map(product => ({

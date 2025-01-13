@@ -3,17 +3,17 @@ import { ShopContext } from "../context/ShopContext";
 import Title from "../components/Title";
 
 // Define types for product and shop context
-interface Product {
-    _id: string;
-    name: string;
-    image: string[];
-    price: number;
-}
+// interface Product {
+//     _id: string;
+//     name: string;
+//     image: string[];
+//     price: number;
+// }
 
-interface ShopContextType {
-    products: Product[];
-    currency: string;
-}
+// interface ShopContextType {
+//     products: Product[];
+//     currency: string;
+// }
 
 const Orders: React.FC = () => {
     const context = useContext(ShopContext);

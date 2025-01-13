@@ -10,6 +10,8 @@ import exchange_icon from './coins-swap.svg'
 import support_icon from './group.svg'
 import quality_icon from './thumbs-up.svg'
 import cross_icon from './xmark.svg'
+import star_icon from './star.svg'
+import star_dull_icon from './star-dashed.svg'
 
 
 
@@ -76,7 +78,9 @@ export const assets = {
     support_icon,
     quality_icon,
     exchange_icon,
-    cross_icon
+    cross_icon,
+    star_icon,
+    star_dull_icon
 }
 
 

@@ -12,6 +12,7 @@ import quality_icon from './thumbs-up.svg'
 import cross_icon from './xmark.svg'
 import star_icon from './star.svg'
 import star_dull_icon from './star-dashed.svg'
+import bin_icon from './trash-solid.svg'
 
 
 
@@ -80,7 +81,8 @@ export const assets = {
     exchange_icon,
     cross_icon,
     star_icon,
-    star_dull_icon
+    star_dull_icon,
+    bin_icon
 }
 
 

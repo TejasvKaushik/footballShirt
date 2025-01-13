@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewsletterBox = () => {
+const NewsletterBox: React.FC = () => {
   return (
     <div className='text-center'>
 

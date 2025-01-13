@@ -3,14 +3,13 @@ import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 
-
 const NavBar: React.FC = () => {
   const context = useContext(ShopContext);
   const [visible, setVisible] = useState<boolean>(false);
 
   if (!context) {
     throw new Error("ShopContext must be used within a ShopContextProvider");
-}
+  }
 
   const { setShowSearch, getCartCount } = context;
 
@@ -41,10 +40,21 @@ const NavBar: React.FC = () => {
       </ul>
 
       <div className="flex items-center gap-6">
-        <img onClick={()=>setShowSearch(true)} src={assets.searchIcon} className="w-5 cursor-pointer" alt="Search Icon" />
+        <img
+          onClick={() => setShowSearch(true)}
+          src={assets.searchIcon}
+          className="w-5 cursor-pointer"
+          alt="Search Icon"
+        />
 
         <div className="group relative">
-          <img src={assets.profileIcon} className="w-5 cursor-pointer" alt="Profile Icon" />
+          <Link to="/login">
+            <img
+              src={assets.profileIcon}
+              className="w-5 cursor-pointer"
+              alt="Profile Icon"
+            />
+          </Link>
 
           <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
             <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
@@ -77,9 +87,16 @@ const NavBar: React.FC = () => {
         }`}
       >
         <div className="flex flex-col text-gray-600">
-          <div onClick={() => setVisible(false)} className="flex items-center gap-4 p-3">
+          <div
+            onClick={() => setVisible(false)}
+            className="flex items-center gap-4 p-3"
+          >
             <div className="flex items-center gap-4 cursor-pointer">
-              <img src={assets.navArrowDown} className="h-4 rotate-90" alt="Back Arrow" />
+              <img
+                src={assets.navArrowDown}
+                className="h-4 rotate-90"
+                alt="Back Arrow"
+              />
               <p>Back</p>
             </div>
           </div>

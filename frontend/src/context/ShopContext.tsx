@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useState } from "react";
 import { products } from "../assets/assets";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 // Define the type for the context value
 interface ShopContextType {
@@ -16,6 +17,7 @@ interface ShopContextType {
     updateQuantity: (itemId: string, size: string, quantity: number) => void;
     getCartCount: () => number;
     getCartAmount: () => number;
+    navigate: (path: string) => void
 }
 
 // Provide a default value or undefined for initial context
@@ -32,6 +34,7 @@ const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
     const [search, setSearch] = useState("");
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState<Record<string, Record<string, number>>>({});
+    const navigate = useNavigate();
 
     const addToCart = (itemId: string, size: string) => {
         if (!size) {
@@ -91,6 +94,7 @@ const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
         updateQuantity,
         getCartCount,
         getCartAmount,
+        navigate
     };
 
     return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;

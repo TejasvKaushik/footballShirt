@@ -3,7 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
 import { useLocation } from "react-router-dom";
 
-const SearchBar = () => {
+const SearchBar: React.FC = () => {
   const context = useContext(ShopContext);
 
   if (!context) {

@@ -10,14 +10,18 @@ import Orders from './pages/orders'
 import PlaceOrder from './pages/placeOrder'
 import Product from './pages/product'
 import NavBar from './components/NavBar'
+import Hero from './components/Hero'
+import LatestCollection from './components/LatestCollection'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:[9vw]'>
       <NavBar />
+      <Home />
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/collections' element={<Collections/>} />
+        <Route path='/collection' element={<Collections/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/contact' element={<Contact/>} />
@@ -26,6 +30,7 @@ const App = () => {
         <Route path='/place-order' element={<PlaceOrder/>} />
         <Route path='/product/:product-id' element={<Product/>} />
       </Routes>
+      <Footer />
     </div>
   )
 }

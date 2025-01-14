@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <div className='flex flex-col sm:flex-row border border-gray-400'>
         {/*left*/}

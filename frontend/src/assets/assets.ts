@@ -89,7 +89,7 @@ export const assets = {
 // products list
 export const products = [
     {
-        "id": "id_000",
+        "_id": "id_000",
         "name": "Men Product 1",
         "description": "Perfect for casual and formal occasions.",
         "price": 51,
@@ -105,7 +105,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_001",
+        "_id": "id_001",
         "name": "Women Product 2",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 437,
@@ -121,7 +121,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_002",
+        "_id": "id_002",
         "name": "Kids Product 3",
         "description": "Stylish and comfortable for all-day wear.",
         "price": 351,
@@ -137,7 +137,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_003",
+        "_id": "id_003",
         "name": "Women Product 4",
         "description": "Stylish and comfortable for all-day wear.",
         "price": 402,
@@ -153,7 +153,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_004",
+        "_id": "id_004",
         "name": "Men Product 5",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 176,
@@ -169,7 +169,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_005",
+        "_id": "id_005",
         "name": "Kids Product 6",
         "description": "Made from premium materials for durability.",
         "price": 453,
@@ -185,7 +185,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_006",
+        "_id": "id_006",
         "name": "Women Product 7",
         "description": "Stylish and comfortable for all-day wear.",
         "price": 71,
@@ -201,7 +201,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_007",
+        "_id": "id_007",
         "name": "Women Product 8",
         "description": "A high-quality product with great reviews.",
         "price": 226,
@@ -217,7 +217,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_008",
+        "_id": "id_008",
         "name": "Men Product 9",
         "description": "Made from premium materials for durability.",
         "price": 94,
@@ -233,7 +233,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_009",
+        "_id": "id_009",
         "name": "Men Product 10",
         "description": "Made from premium materials for durability.",
         "price": 494,
@@ -249,7 +249,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_010",
+        "_id": "id_010",
         "name": "Women Product 11",
         "description": "Perfect for casual and formal occasions.",
         "price": 113,
@@ -265,7 +265,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_011",
+        "_id": "id_011",
         "name": "Women Product 12",
         "description": "Perfect for casual and formal occasions.",
         "price": 419,
@@ -281,7 +281,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_012",
+        "_id": "id_012",
         "name": "Kids Product 13",
         "description": "A high-quality product with great reviews.",
         "price": 332,
@@ -297,7 +297,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_013",
+        "_id": "id_013",
         "name": "Women Product 14",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 284,
@@ -313,7 +313,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_014",
+        "_id": "id_014",
         "name": "Kids Product 15",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 196,
@@ -329,7 +329,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_015",
+        "_id": "id_015",
         "name": "Home Product 16",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 337,
@@ -345,7 +345,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_016",
+        "_id": "id_016",
         "name": "Home Product 17",
         "description": "Perfect for casual and formal occasions.",
         "price": 93,
@@ -361,7 +361,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_017",
+        "_id": "id_017",
         "name": "Women Product 18",
         "description": "Made from premium materials for durability.",
         "price": 270,
@@ -377,7 +377,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_018",
+        "_id": "id_018",
         "name": "Kids Product 19",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 73,
@@ -393,7 +393,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_019",
+        "_id": "id_019",
         "name": "Women Product 20",
         "description": "Perfect for casual and formal occasions.",
         "price": 171,
@@ -409,7 +409,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_020",
+        "_id": "id_020",
         "name": "Women Product 21",
         "description": "Stylish and comfortable for all-day wear.",
         "price": 224,
@@ -425,7 +425,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_021",
+        "_id": "id_021",
         "name": "Men Product 22",
         "description": "Perfect for casual and formal occasions.",
         "price": 173,
@@ -441,7 +441,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_022",
+        "_id": "id_022",
         "name": "Men Product 23",
         "description": "Made from premium materials for durability.",
         "price": 413,
@@ -457,7 +457,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_023",
+        "_id": "id_023",
         "name": "Men Product 24",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 118,
@@ -473,7 +473,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_024",
+        "_id": "id_024",
         "name": "Kids Product 25",
         "description": "Made from premium materials for durability.",
         "price": 216,
@@ -489,7 +489,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_025",
+        "_id": "id_025",
         "name": "Women Product 26",
         "description": "A high-quality product with great reviews.",
         "price": 395,
@@ -505,7 +505,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_026",
+        "_id": "id_026",
         "name": "Women Product 27",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 125,
@@ -521,7 +521,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_027",
+        "_id": "id_027",
         "name": "Kids Product 28",
         "description": "Perfect for casual and formal occasions.",
         "price": 282,
@@ -537,7 +537,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_028",
+        "_id": "id_028",
         "name": "Women Product 29",
         "description": "Stylish and comfortable for all-day wear.",
         "price": 379,
@@ -553,7 +553,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_029",
+        "_id": "id_029",
         "name": "Women Product 30",
         "description": "Made from premium materials for durability.",
         "price": 105,
@@ -569,7 +569,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_030",
+        "_id": "id_030",
         "name": "Women Product 31",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 180,
@@ -585,7 +585,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_031",
+        "_id": "id_031",
         "name": "Men Product 32",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 289,
@@ -601,7 +601,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_032",
+        "_id": "id_032",
         "name": "Kids Product 33",
         "description": "Made from premium materials for durability.",
         "price": 307,
@@ -617,7 +617,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_033",
+        "_id": "id_033",
         "name": "Men Product 34",
         "description": "A high-quality product with great reviews.",
         "price": 479,
@@ -633,7 +633,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_034",
+        "_id": "id_034",
         "name": "Home Product 35",
         "description": "Made from premium materials for durability.",
         "price": 118,
@@ -649,7 +649,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_035",
+        "_id": "id_035",
         "name": "Women Product 36",
         "description": "Perfect for casual and formal occasions.",
         "price": 349,
@@ -665,7 +665,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_036",
+        "_id": "id_036",
         "name": "Kids Product 37",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 270,
@@ -681,7 +681,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_037",
+        "_id": "id_037",
         "name": "Home Product 38",
         "description": "Made from premium materials for durability.",
         "price": 155,
@@ -697,7 +697,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_038",
+        "_id": "id_038",
         "name": "Kids Product 39",
         "description": "Perfect for casual and formal occasions.",
         "price": 178,
@@ -713,7 +713,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_039",
+        "_id": "id_039",
         "name": "Women Product 40",
         "description": "A high-quality product with great reviews.",
         "price": 334,
@@ -729,7 +729,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_040",
+        "_id": "id_040",
         "name": "Home Product 41",
         "description": "A high-quality product with great reviews.",
         "price": 165,
@@ -745,7 +745,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_041",
+        "_id": "id_041",
         "name": "Men Product 42",
         "description": "Stylish and comfortable for all-day wear.",
         "price": 348,
@@ -761,7 +761,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_042",
+        "_id": "id_042",
         "name": "Kids Product 43",
         "description": "A high-quality product with great reviews.",
         "price": 208,
@@ -777,7 +777,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_043",
+        "_id": "id_043",
         "name": "Women Product 44",
         "description": "A high-quality product with great reviews.",
         "price": 341,
@@ -793,7 +793,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_044",
+        "_id": "id_044",
         "name": "Men Product 45",
         "description": "Perfect for casual and formal occasions.",
         "price": 205,
@@ -809,7 +809,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_045",
+        "_id": "id_045",
         "name": "Women Product 46",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 400,
@@ -825,7 +825,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_046",
+        "_id": "id_046",
         "name": "Men Product 47",
         "description": "A high-quality product with great reviews.",
         "price": 301,
@@ -841,7 +841,7 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_047",
+        "_id": "id_047",
         "name": "Women Product 48",
         "description": "Perfect for casual and formal occasions.",
         "price": 89,
@@ -857,7 +857,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_048",
+        "_id": "id_048",
         "name": "Women Product 49",
         "description": "Affordable and trendy choice for modern consumers.",
         "price": 390,
@@ -873,7 +873,7 @@ export const products = [
         "bestseller": true
     },
     {
-        "id": "id_049",
+        "_id": "id_049",
         "name": "Women Product 50",
         "description": "Perfect for casual and formal occasions.",
         "price": 372,

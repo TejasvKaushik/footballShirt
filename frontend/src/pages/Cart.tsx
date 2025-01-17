@@ -5,13 +5,13 @@ import { assets } from '../assets/assets';
 import CartTotal from '../components/CartTotal';
 
 interface CartItem {
-  id: string;
+  _id: string;
   size: string;
   quantity: number;
 }
 
 interface Product {
-  id: string;
+  _id: string;
   name: string;
   price: number;
   image: string[];
@@ -29,13 +29,14 @@ const Cart: React.FC = () => {
   const [cartData, setCartData] = useState<CartItem[]>([]);
 
   useEffect(() => {
+    if(products.length > 0){
     const tempData: CartItem[] = [];
 
     for (const items in cartItems) {
       for (const item in cartItems[items]) {
         if (cartItems[items][item] > 0) {
           tempData.push({
-            id: items,
+            _id: items,
             size: item,
             quantity: cartItems[items][item],
           });
@@ -44,7 +45,8 @@ const Cart: React.FC = () => {
     }
 
     setCartData(tempData);
-  }, [cartItems]);
+  }
+  }, [cartItems, products]);
 
   return (
     <div className="border-t pt-14">
@@ -57,7 +59,7 @@ const Cart: React.FC = () => {
           <p className="text-center text-xl font-medium text-gray-500">Cart is empty</p>
         ) : (
           cartData.map((item, index) => {
-            const productData = products.find((product: Product) => product.id === item.id);
+            const productData = products.find((product: Product) => product._id === item._id);
 
             if (!productData) return null;
 
@@ -83,7 +85,7 @@ const Cart: React.FC = () => {
                   onChange={(e) =>
                     e.target.value === '' || e.target.value === '0'
                       ? null
-                      : updateQuantity(item.id, item.size, Number(e.target.value))
+                      : updateQuantity(item._id, item.size, Number(e.target.value))
                   }
                   className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1"
                   type="number"
@@ -91,7 +93,7 @@ const Cart: React.FC = () => {
                   defaultValue={item.quantity}
                 />
                 <img
-                  onClick={() => updateQuantity(item.id, item.size, 0)}
+                  onClick={() => updateQuantity(item._id, item.size, 0)}
                   className="w-4 mr-4 sm:w-5 cursor-pointer"
                   src={assets.bin_icon}
                   alt=""

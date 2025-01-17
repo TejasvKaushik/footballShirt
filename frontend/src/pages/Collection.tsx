@@ -5,7 +5,7 @@ import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
 
 interface Product {
-  id: string;
+  _id: string;
   name: string;
   category: string;
   subCategory: string;
@@ -75,7 +75,7 @@ const Collection: React.FC = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory, search, showSearch]);
+  }, [category, subCategory, search, showSearch, products]);
 
   useEffect(() => {
     sortProduct();
@@ -145,7 +145,7 @@ const Collection: React.FC = () => {
           {filterProducts.map((item, index) => (
             <ProductItem
               key={index}
-              id={item.id}
+              id={item._id}
               image={item.image}
               name={item.name}
               price={item.price}

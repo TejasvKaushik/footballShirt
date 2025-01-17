@@ -5,7 +5,7 @@ import { assets } from '../assets/assets';
 import RelatedProducts from '../components/RelatedProducts';
 
 interface Product {
-  id: string;
+  _id: string;
   name: string;
   price: number;
   description: string;
@@ -28,7 +28,7 @@ const Product: React.FC = () => {
   const [image, setImage] = useState<string>('');
 
   const fetchProductData = async () => {
-    const product = products.find((item) => item.id === productId);
+    const product = products.find((item) => item._id === productId);
     if (product) {
       setProductData(product);
       setImage(product.image[0]);
@@ -85,7 +85,7 @@ const Product: React.FC = () => {
               ))}
             </div>
           </div>
-          <button onClick={() => addToCart(productData.id, size)} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>ADD TO CART</button>
+          <button onClick={() => addToCart(productData._id, size)} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>ADD TO CART</button>
 
 
           <hr className="mt-8 sm:w-4/5" />

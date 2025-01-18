@@ -6,7 +6,6 @@ import { ShopContext } from "../context/ShopContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-// Define the type for the context value
 const PlaceOrder: React.FC = () => {
   const context = useContext(ShopContext);
 
@@ -88,8 +87,6 @@ const PlaceOrder: React.FC = () => {
         }
       }
 
-      console.log(orderItems)
-
       const orderData = {
         address: formData,
         items: orderItems,
@@ -133,22 +130,20 @@ const PlaceOrder: React.FC = () => {
     }
   };
 
-
-
   return (
-    <form onSubmit={onSubmitHandler} className="flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t">
+    <form onSubmit={onSubmitHandler} className="flex flex-col sm:flex-row justify-between gap-8 pt-5 sm:pt-14 min-h-[80vh] border-t border-gray-200 bg-gradient-to-t from-white via-gray-50 to-gray-100 p-8">
       {/* Left Side */}
-      <div className="flex flex-col gap-4 w-full sm:max-w-[480px]">
-        <div className="text-xl sm:text-2xl my-3">
+      <div className="flex flex-col gap-6 w-full sm:max-w-[480px] p-6 rounded-lg shadow-lg bg-white">
+        <div className="text-xl sm:text-2xl font-semibold text-gray-800">
           <Title text1="DELIVERY" text2="INFORMATION" />
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           <input
             required
             onChange={onChangeHandler}
             name="firstName"
             value={formData.firstName}
-            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            className="border border-gray-300 rounded py-2 px-4 w-full focus:ring-2 focus:ring-orange-500"
             type="text"
             placeholder="First name"
           />
@@ -157,7 +152,7 @@ const PlaceOrder: React.FC = () => {
             onChange={onChangeHandler}
             name="lastName"
             value={formData.lastName}
-            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            className="border border-gray-300 rounded py-2 px-4 w-full focus:ring-2 focus:ring-orange-500"
             type="text"
             placeholder="Last name"
           />
@@ -167,7 +162,7 @@ const PlaceOrder: React.FC = () => {
           onChange={onChangeHandler}
           name="email"
           value={formData.email}
-          className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+          className="border border-gray-300 rounded py-2 px-4 w-full focus:ring-2 focus:ring-orange-500"
           type="email"
           placeholder="Email address"
         />
@@ -176,17 +171,17 @@ const PlaceOrder: React.FC = () => {
           onChange={onChangeHandler}
           name="street"
           value={formData.street}
-          className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+          className="border border-gray-300 rounded py-2 px-4 w-full focus:ring-2 focus:ring-orange-500"
           type="text"
           placeholder="Street"
         />
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           <input
             required
             onChange={onChangeHandler}
             name="city"
             value={formData.city}
-            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            className="border border-gray-300 rounded py-2 px-4 w-full focus:ring-2 focus:ring-orange-500"
             type="text"
             placeholder="City"
           />
@@ -194,18 +189,18 @@ const PlaceOrder: React.FC = () => {
             onChange={onChangeHandler}
             name="state"
             value={formData.state}
-            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            className="border border-gray-300 rounded py-2 px-4 w-full focus:ring-2 focus:ring-orange-500"
             type="text"
             placeholder="State"
           />
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           <input
             required
             onChange={onChangeHandler}
             name="zipcode"
             value={formData.zipcode}
-            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            className="border border-gray-300 rounded py-2 px-4 w-full focus:ring-2 focus:ring-orange-500"
             type="number"
             placeholder="Zipcode"
           />
@@ -214,7 +209,7 @@ const PlaceOrder: React.FC = () => {
             onChange={onChangeHandler}
             name="country"
             value={formData.country}
-            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            className="border border-gray-300 rounded py-2 px-4 w-full focus:ring-2 focus:ring-orange-500"
             type="text"
             placeholder="Country"
           />
@@ -224,37 +219,37 @@ const PlaceOrder: React.FC = () => {
           onChange={onChangeHandler}
           name="phone"
           value={formData.phone}
-          className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+          className="border border-gray-300 rounded py-2 px-4 w-full focus:ring-2 focus:ring-orange-500"
           type="number"
           placeholder="Phone"
         />
       </div>
 
       {/* Right Side */}
-      <div className="mt-8">
-        <div className="mt-8 min-w-80">
+      <div className="flex flex-col gap-8 mt-8 p-6 bg-white rounded-lg shadow-lg">
+        <div className="min-w-80">
           <CartTotal />
         </div>
 
-        <div className="mt-12">
+        <div>
           <Title text1="PAYMENT" text2="METHOD" />
-          <div className="flex gap-3 flex-col lg:flex-row">
-            <div onClick={() => setMethod('stripe')} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
+          <div className="flex gap-4 flex-col lg:flex-row">
+            <div onClick={() => setMethod('stripe')} className="flex items-center gap-4 border p-4 rounded-lg cursor-pointer hover:bg-gray-100">
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'stripe' ? 'bg-green-400' : ''}`}></p>
-              <img className="h-5 mx-4" src={assets.stripe_logo} alt="" />
+              <img className="h-6 mx-4" src={assets.stripe_logo} alt="Stripe" />
             </div>
-            <div onClick={() => setMethod('razorpay')} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
+            <div onClick={() => setMethod('razorpay')} className="flex items-center gap-4 border p-4 rounded-lg cursor-pointer hover:bg-gray-100">
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'razorpay' ? 'bg-green-400' : ''}`}></p>
-              <img className="h-5 mx-4" src={assets.razorpay_logo} alt="" />
+              <img className="h-6 mx-4" src={assets.razorpay_logo} alt="Razorpay" />
             </div>
-            <div onClick={() => setMethod('cod')} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
+            <div onClick={() => setMethod('cod')} className="flex items-center gap-4 border p-4 rounded-lg cursor-pointer hover:bg-gray-100">
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'cod' ? 'bg-green-400' : ''}`}></p>
               <p className="text-gray-500 text-sm font-medium mx-4">CASH ON DELIVERY</p>
             </div>
           </div>
 
           <div className="w-full text-end mt-8">
-            <button type="submit" className="bg-black text-white px-16 py-3 text-sm">
+            <button type="submit" className="bg-black text-white px-16 py-3 text-sm rounded-lg hover:bg-gray-700 transition-all duration-300">
               PLACE ORDER
             </button>
           </div>

@@ -15,6 +15,8 @@ import star_dull_icon from './icons/star-dashed.svg'
 import bin_icon from './icons/trash-solid.svg'
 import stripe_logo from './icons/stripe_logo.png'
 import razorpay_logo from './icons/razorpay_logo.png'
+import about_img from './icons/about_img.png'
+import contact_img from './icons/contact_img.png'
 
 // product attributes
 export const assets = {
@@ -33,17 +35,18 @@ export const assets = {
     star_dull_icon,
     bin_icon,
     razorpay_logo,
-    stripe_logo
+    stripe_logo,
+    about_img,
+    contact_img
 }
 
 export const products = [
     {
-        "id": "id_000",
         "_id": "id_000",
         "name": "Men Product 1",
         "description": "Lorem Ipsum.",
         "price": 51,
-        "image": [],
+        "image": [''],
         "club": "RSC ANDERLECHT",
         "supplier": "Shiv Naresh",
         "sizes": [
@@ -55,12 +58,11 @@ export const products = [
         "bestseller": false
     },
     {
-        "id": "id_001",
         "_id": "id_001",
         "name": "Women Product 2",
         "description": "LOREM IPSUM",
         "price": 437,
-        "image": [],
+        "image": [''],
         "club": "FC Soccer",
         "supplier": "Shiv Naresh",
         "sizes": [

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { useSearchParams } from 'react-router-dom'
@@ -13,7 +12,7 @@ const Verify = () => {
         throw new Error('ShopContext must be used within a ShopProvider');
       }
     const { navigate, token, setCartItems, backendUrl } = context;
-    const [searchParams, setSearchParams] = useSearchParams()
+    const [searchParams] = useSearchParams()
     
     const success = searchParams.get('success')
     const orderId = searchParams.get('orderId')

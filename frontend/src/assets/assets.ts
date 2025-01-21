@@ -35,3 +35,40 @@ export const assets = {
     razorpay_logo,
     stripe_logo
 }
+
+export const products = [
+    {
+        "id": "id_000",
+        "_id": "id_000",
+        "name": "Men Product 1",
+        "description": "Lorem Ipsum.",
+        "price": 51,
+        "image": [],
+        "club": "RSC ANDERLECHT",
+        "supplier": "Shiv Naresh",
+        "sizes": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "date": 1736788805993,
+        "bestseller": false
+    },
+    {
+        "id": "id_001",
+        "_id": "id_001",
+        "name": "Women Product 2",
+        "description": "LOREM IPSUM",
+        "price": 437,
+        "image": [],
+        "club": "FC Soccer",
+        "supplier": "Shiv Naresh",
+        "sizes": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "date": 1736788805993,
+        "bestseller": true
+    }
+]

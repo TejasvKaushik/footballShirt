@@ -19,9 +19,9 @@ import Verify from './pages/Verify';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div >
       <ToastContainer />
-      {/* <NavBar /> */}
+      <NavBar />
       <SearchBar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -35,7 +35,6 @@ const App: React.FC = () => {
         <Route path='/place-order' element={<PlaceOrder />} />
         <Route path='/product/:productId' element={<Product />} />
         <Route path='/verify' element={<Verify />} />
-        {/* <Route path='*' element={<NotFound />} /> Fallback route for unrecognized paths */}
       </Routes>
       <Footer />
     </div>

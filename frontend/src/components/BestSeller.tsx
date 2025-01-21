@@ -9,8 +9,8 @@ interface Product {
   description: string;
   price: number;
   image: string[];
-  category: string;
-  subCategory: string;
+  club: string;
+  supplier: string;
   sizes: string[];
   date: number;
   bestseller: boolean;

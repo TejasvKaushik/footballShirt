@@ -17,8 +17,8 @@ const Add: React.FC<AddProps> = ({ token }) => {
   const [name, setName] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [price, setPrice] = useState<string>('');
-  const [category, setCategory] = useState<string>('Men');
-  const [subCategory, setSubCategory] = useState<string>('Topwear');
+  const [club, setclub] = useState<string>('Liverpool');
+  const [supplier, setsupplier] = useState<string>('Nike');
   const [bestseller, setBestseller] = useState<boolean>(false);
   const [sizes, setSizes] = useState<string[]>([]);
 
@@ -31,8 +31,8 @@ const Add: React.FC<AddProps> = ({ token }) => {
       formData.append('name', name);
       formData.append('description', description);
       formData.append('price', price);
-      formData.append('category', category);
-      formData.append('subCategory', subCategory);
+      formData.append('club', club);
+      formData.append('supplier', supplier);
       formData.append('bestseller', JSON.stringify(bestseller));
       formData.append('sizes', JSON.stringify(sizes));
 
@@ -120,19 +120,28 @@ const Add: React.FC<AddProps> = ({ token }) => {
       </div>
       <div className="flex flex-col sm:flex-row gap-2 w-full sm:gap-8">
         <div>
-          <p className="mb-2">Product category</p>
-          <select onChange={(e) => setCategory(e.target.value)} className="w-full px-3 py-2">
-            <option value="Men">Men</option>
-            <option value="Women">Women</option>
-            <option value="Kids">Kids</option>
+          <p className="mb-2">Product club</p>
+          <select onChange={(e) => setclub(e.target.value)} className="w-full px-3 py-2">
+            <option value="Arsenal">Arsenal</option>
+            <option value="Bayern Munich">Bayern Munich</option>
+            <option value="AC Milan">AC Milan</option>
+            <option value="Chelsea">Chelsea</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Inter Miami">Inter Miami</option>
+            <option value="Tottenham">Tottenham</option>
+            <option value="Juventus">Juventus</option>
+            <option value="Liverpool">Liverpool</option>
+            <option value="Manchester City">Manchester City</option>
+            <option value="Real Madrid">Real Madrid</option>
+            <option value="PSG">PSG</option>
           </select>
         </div>
         <div>
-          <p className="mb-2">Sub category</p>
-          <select onChange={(e) => setSubCategory(e.target.value)} className="w-full px-3 py-2">
-            <option value="Topwear">Topwear</option>
-            <option value="Bottomwear">Bottomwear</option>
-            <option value="Winterwear">Winterwear</option>
+          <p className="mb-2">Supplier</p>
+          <select onChange={(e) => setsupplier(e.target.value)} className="w-full px-3 py-2">
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="Puma">Puma</option>
           </select>
         </div>
         <div>

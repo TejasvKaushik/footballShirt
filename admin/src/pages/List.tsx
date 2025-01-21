@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 interface Product {
   _id: string;
   name: string;
-  category: string;
+  club: string;
   price: number;
   image: string[];
 }
@@ -64,7 +64,7 @@ const List: React.FC<ListProps> = ({ token }) => {
         <div className="hidden md:grid grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center py-1 px-2 border bg-gray-100 text-sm">
           <b>Image</b>
           <b>Name</b>
-          <b>Category</b>
+          <b>club</b>
           <b>Price</b>
           <b className="text-center">Action</b>
         </div>
@@ -77,7 +77,7 @@ const List: React.FC<ListProps> = ({ token }) => {
           >
             <img className="w-12" src={item.image[0]} alt={item.name} />
             <p>{item.name}</p>
-            <p>{item.category}</p>
+            <p>{item.club}</p>
             <p>
               {currency}
               {item.price}

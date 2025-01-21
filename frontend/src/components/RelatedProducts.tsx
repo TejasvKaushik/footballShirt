@@ -4,20 +4,20 @@ import { ShopContext } from '../context/ShopContext';
 import ProductItem from './ProductItem';
 
 interface RelatedProductsProps {
-  category: string;
-  subCategory: string;
+  club: string;
+  supplier: string;
 }
 
 interface Product {
   _id: string;
   name: string;
-  category: string;
-  subCategory: string;
+  club: string;
+  supplier: string;
   price: number;
   image: string[];
 }
 
-const RelatedProducts: React.FC<RelatedProductsProps> = ({ category, subCategory }) => {
+const RelatedProducts: React.FC<RelatedProductsProps> = ({ club, supplier }) => {
   const [related, setRelated] = useState<Product[]>([]);
   const context = useContext(ShopContext);
 
@@ -30,11 +30,11 @@ const RelatedProducts: React.FC<RelatedProductsProps> = ({ category, subCategory
   useEffect(() => {
     if (products.length > 0) {
       let productsCopy = [...products];
-      productsCopy = productsCopy.filter((item) => category === item.category);
-      productsCopy = productsCopy.filter((item) => subCategory === item.subCategory);
+      productsCopy = productsCopy.filter((item) => club === item.club);
+      productsCopy = productsCopy.filter((item) => supplier === item.supplier);
       setRelated(productsCopy.slice(0, 5));
     }
-  }, [products, category, subCategory]);
+  }, [products, club, supplier]);
 
   return (
     <div className="my-24">

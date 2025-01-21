@@ -11,8 +11,8 @@ interface Product {
   description: string;
   image: string[];
   sizes: string[];
-  category: string;
-  subCategory: string;
+  club: string;
+  supplier: string;
 }
 
 const Product: React.FC = () => {
@@ -141,8 +141,8 @@ const Product: React.FC = () => {
       </div>
 
       <RelatedProducts
-        category={productData.category}
-        subCategory={productData.subCategory}
+        club={productData.club}
+        supplier={productData.supplier}
       />
     </div>
   ) : (

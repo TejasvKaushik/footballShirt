@@ -21,7 +21,7 @@ const App: React.FC = () => {
   return (
     <div>
       <ToastContainer />
-      <NavBar />
+      {/* <NavBar /> */}
       <SearchBar />
       <Routes>
         <Route path='/' element={<Home />} />

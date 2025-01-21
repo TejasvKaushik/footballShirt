@@ -7,8 +7,8 @@ import { assets } from '../assets/assets';
 interface Product {
   _id: string;
   name: string;
-  category: string;
-  subCategory: string;
+  club: string;
+  supplier: string;
   price: number;
   image: string[];
 }
@@ -23,21 +23,21 @@ const Collection: React.FC = () => {
   const { products, search, showSearch } = context;
 
   const [filterProducts, setFilterProducts] = useState<Product[]>([]);
-  const [category, setCategory] = useState<string[]>([]);
-  const [subCategory, setSubCategory] = useState<string[]>([]);
+  const [club, setclub] = useState<string[]>([]);
+  const [supplier, setsupplier] = useState<string[]>([]);
   const [showFilter, setShowFilter] = useState<boolean>(false);
   const [sortType, setSortType] = useState<string>('relavent');
 
-  const toggleCategory = (e: ChangeEvent<HTMLInputElement>) => {
+  const toggleclub = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setCategory((prev) =>
+    setclub((prev) =>
       prev.includes(value) ? prev.filter((a) => a !== value) : [...prev, value]
     );
   };
 
-  const toggleSubCategory = (e: ChangeEvent<HTMLInputElement>) => {
+  const togglesupplier = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setSubCategory((prev) =>
+    setsupplier((prev) =>
       prev.includes(value) ? prev.filter((a) => a !== value) : [...prev, value]
     );
   };
@@ -51,15 +51,15 @@ const Collection: React.FC = () => {
       );
     }
 
-    if (category.length > 0) {
+    if (club.length > 0) {
       productsCopy = productsCopy.filter((item) =>
-        category.includes(item.category)
+        club.includes(item.club)
       );
     }
 
-    if (subCategory.length > 0) {
+    if (supplier.length > 0) {
       productsCopy = productsCopy.filter((item) =>
-        subCategory.includes(item.subCategory)
+        supplier.includes(item.supplier)
       );
     }
 
@@ -84,7 +84,7 @@ const Collection: React.FC = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory, search, showSearch, products]);
+  }, [club, supplier, search, showSearch, products]);
 
   useEffect(() => {
     sortProduct();
@@ -109,31 +109,58 @@ const Collection: React.FC = () => {
         </p>
 
         <div className={`border border-gray-300 p-5 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
-          <p className="mb-3 text-sm font-medium text-gray-700">CATEGORIES</p>
+          <p className="mb-3 text-sm font-medium text-gray-700">CLUB</p>
           <div className="flex flex-col gap-3 text-sm font-light text-gray-700">
             <p className="flex gap-2">
-              <input className="w-4" value="Men" onChange={toggleCategory} type="checkbox" /> Men
+              <input className="w-4" value="AC Milan" onChange={toggleclub} type="checkbox" /> AC Milan
             </p>
             <p className="flex gap-2">
-              <input className="w-4" value="Women" onChange={toggleCategory} type="checkbox" /> Women
+              <input className="w-4" value="Arsenal" onChange={toggleclub} type="checkbox" /> Arsenal
             </p>
             <p className="flex gap-2">
-              <input className="w-4" value="Kids" onChange={toggleCategory} type="checkbox" /> Kids
+              <input className="w-4" value="Barcelona" onChange={toggleclub} type="checkbox" /> Barcelona
+            </p>
+            <p className="flex gap-2">
+              <input className="w-4" value="Bayern Munich" onChange={toggleclub} type="checkbox" /> Bayern Munich
+            </p>
+            <p className="flex gap-2">
+              <input className="w-4" value="Chelsea" onChange={toggleclub} type="checkbox" /> Chelsea
+            </p>
+            <p className="flex gap-2">
+              <input className="w-4" value="Tottenham" onChange={toggleclub} type="checkbox" /> Tottenham
+            </p>
+            <p className="flex gap-2">
+              <input className="w-4" value="Inter Miami" onChange={toggleclub} type="checkbox" /> Inter Miami
+            </p>
+            <p className="flex gap-2">
+              <input className="w-4" value="Juventus" onChange={toggleclub} type="checkbox" /> Juventus
+            </p>
+            <p className="flex gap-2">
+              <input className="w-4" value="Liverpool" onChange={toggleclub} type="checkbox" /> Liverpool
+            </p>
+            <p className="flex gap-2">
+              <input className="w-4" value="Manchester City" onChange={toggleclub} type="checkbox" /> Manchester City
+            </p>
+            <p className="flex gap-2">
+              <input className="w-4" value="Real Madrid" onChange={toggleclub} type="checkbox" /> Real Madrid
+            </p>
+            <p className="flex gap-2">
+              <input className="w-4" value="PSG" onChange={toggleclub} type="checkbox" /> PSG
             </p>
           </div>
         </div>
 
         <div className={`border border-gray-300 p-5 my-5 ${showFilter ? '' : 'hidden'} sm:block`}>
-          <p className="mb-3 text-sm font-medium text-gray-700">TYPE</p>
+          <p className="mb-3 text-sm font-medium text-gray-700">BRAND</p>
           <div className="flex flex-col gap-3 text-sm font-light text-gray-700">
             <p className="flex gap-2">
-              <input className="w-4" value="Topwear" onChange={toggleSubCategory} type="checkbox" /> Topwear
+              <input className="w-4" value="Adidas" onChange={togglesupplier} type="checkbox" /> Adidas
             </p>
             <p className="flex gap-2">
-              <input className="w-4" value="Bottomwear" onChange={toggleSubCategory} type="checkbox" /> Bottomwear
+              <input className="w-4" value="Nike" onChange={togglesupplier} type="checkbox" /> Nike
             </p>
             <p className="flex gap-2">
-              <input className="w-4" value="Winterwear" onChange={toggleSubCategory} type="checkbox" /> Winterwear
+              <input className="w-4" value="Puma" onChange={togglesupplier} type="checkbox" /> Puma
             </p>
           </div>
         </div>

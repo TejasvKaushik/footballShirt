@@ -19,7 +19,7 @@ import Verify from './pages/Verify';
 
 const App: React.FC = () => {
   return (
-    <div >
+    <div>
       <ToastContainer />
       <NavBar />
       <SearchBar />
